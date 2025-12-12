@@ -1,16 +1,19 @@
 import java.util.Scanner;
 
-public class Bai1 {
+public class Bai7 {
     public static void main(String[] args) {
-        int[] arr = new int[10];
         Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap so phan tu cac so nguyen cho mang:");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
             System.out.print("arr["+i+"] = ");
             arr[i] = sc.nextInt();
         }
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("Gia tri arr["+i+"] = "+arr[i]);
+            if (arr[i] % 2 == 0) {
+                System.out.print(arr[i]+" ");
+            }
         }
-
     }
 }

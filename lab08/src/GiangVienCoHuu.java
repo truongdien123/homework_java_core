@@ -49,4 +49,14 @@ public class GiangVienCoHuu extends GiangVien {
         System.out.println("Luong thoa thuan cua giang vien: "+luongThoaThuan);
         System.out.println("Gio Quy Dinh cua giang vien: "+gioQuyDinh);
     }
+
+    public double tinhLuong() {
+        double luong = 0;
+        if (gioQuyDinh > 40) {
+            luong = luongThoaThuan * gioQuyDinh + (200000*(gioQuyDinh - 40));
+        } else {
+            luong = luongThoaThuan * gioQuyDinh;
+        }
+        return luong;
+    }
 }

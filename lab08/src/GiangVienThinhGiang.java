@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class GiangVienThinhGiang extends GiangVien{
     private String coQuanLamViec;
 
@@ -21,5 +23,15 @@ public class GiangVienThinhGiang extends GiangVien{
         this.coQuanLamViec = coQuanLamViec;
     }
 
-    public void 
+    public void nhap() {
+        super.nhap();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap co quan lam viec cua giang vien:");
+        coQuanLamViec = sc.nextLine();
+    }
+
+    public void xuat() {
+        super.xuat();
+        System.out.println("Co quan lam viec cua giang vien: "+coQuanLamViec);
+    }
 }
